@@ -1,20 +1,29 @@
 const upgradesData = [
   {
     id: "upgrade1",
-    label: "Double Points",
-    cost: 10,
-    multiplier: 2
+    label: "Click Multiplier",
+    baseCost: 10,
+    costMultiplier: 2,
+    type: "click",
+    power: 1,
+    level: 0
   },
   {
     id: "upgrade2",
-    label: "Triple Points",
-    cost: 50,
-    multiplier: 3
+    label: "Super Clicker",
+    baseCost: 50,
+    costMultiplier: 2.5,
+    type: "click",
+    power: 5,
+    level: 0
   },
   {
-    id: "upgrade3",
-    label: "Mega Click (x5)",
-    cost: 200,
-    multiplier: 5
+    id: "autoclick1",
+    label: "Auto-Clicker",
+    baseCost: 100,
+    costMultiplier: 3,
+    type: "auto",
+    power: 1,
+    level: 0
   }
 ];
