@@ -17,7 +17,10 @@
     <div class="game-container">
       <h2>Points: <span id="points">0</span></h2>
       <button id="click-btn">Click Me!</button>
-      <button id="upgrade-btn">Upgrade (Cost: <span id="upgrade-cost">10</span>)</button>
+      <div id="upgrade-buttons">
+      <!-- Upgrade buttons will be loaded here -->
+      </div>
+      <!-- <button id="upgrade-btn">Upgrade (Cost: <span id="upgrade-cost">10</span>)</button> -->
       <p>Multiplier: <span id="multiplier">1</span>x</p>
     </div>
   </main>
@@ -25,7 +28,8 @@
   <footer>
     <p>&copy; 2025 Thomas Theis - Click responsibly 😄</p>
   </footer>
-
+  <!-- At the bottom of index.html, load data.js first, then script.js -->
+  <script src="src/data.js"></script>
   <script src="src/script.js"></script>
 </body>
 </html>

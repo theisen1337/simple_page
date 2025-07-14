@@ -1,29 +1,37 @@
 let points = 0;
 let multiplier = 1;
-let upgradeCost = 10;
 
 const pointsDisplay = document.getElementById("points");
 const multiplierDisplay = document.getElementById("multiplier");
-const upgradeCostDisplay = document.getElementById("upgrade-cost");
+const upgradeContainer = document.getElementById("upgrade-buttons");
 
 document.getElementById("click-btn").addEventListener("click", () => {
   points += multiplier;
   updateUI();
 });
 
-document.getElementById("upgrade-btn").addEventListener("click", () => {
-  if (points >= upgradeCost) {
-    points -= upgradeCost;
-    multiplier *= 2;
-    upgradeCost *= 2;
-    updateUI();
-  } else {
-    alert("Not enough points to upgrade!");
-  }
-});
-
 function updateUI() {
   pointsDisplay.textContent = points;
   multiplierDisplay.textContent = multiplier;
-  upgradeCostDisplay.textContent = upgradeCost;
 }
+
+// Now use the upgradesData directly
+upgradesData.forEach(upgrade => {
+  const button = document.createElement("button");
+  button.textContent = `${upgrade.label} (Cost: ${upgrade.cost})`;
+  button.id = upgrade.id;
+  button.classList.add("upgrade-btn");
+
+  button.addEventListener("click", () => {
+    if (points >= upgrade.cost) {
+      points -= upgrade.cost;
+      multiplier *= upgrade.multiplier;
+      updateUI();
+      button.disabled = true;
+    } else {
+      alert("Not enough points!");
+    }
+  });
+
+  upgradeContainer.appendChild(button);
+});
