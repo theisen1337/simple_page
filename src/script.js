@@ -21,6 +21,7 @@ upgradesData.forEach(upgrade => {
   button.textContent = `${upgrade.label} (Cost: ${upgrade.cost})`;
   button.id = upgrade.id;
   button.classList.add("upgrade-btn");
+  console.log(upgrade.label)
 
   button.addEventListener("click", () => {
     if (points >= upgrade.cost) {
