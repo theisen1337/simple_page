@@ -3,41 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A GitHub Pages static site boilerplate" />
-  <meta name="author" content="Your Name" />
+  <meta name="description" content="Incremental Clicker Game" />
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="style.css" />
-  <title>My GitHub Page</title>
+  <title>Clicker Game</title>
 </head>
 <body>
   <header>
-    <h1>Welcome to My GitHub Page</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>💥 Clicker Game</h1>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About</h2>
-      <p>This is a basic GitHub Pages boilerplate site made with HTML, CSS, and JavaScript.</p>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>Highlight your GitHub repositories or personal work here.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Find me on <a href="https://github.com/yourusername" target="_blank">GitHub</a>.</p>
-    </section>
+    <div class="game-container">
+      <h2>Points: <span id="points">0</span></h2>
+      <button id="click-btn">Click Me!</button>
+      <button id="upgrade-btn">Upgrade (Cost: <span id="upgrade-cost">10</span>)</button>
+      <p>Multiplier: <span id="multiplier">1</span>x</p>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <p>&copy; 2025 Thomas Theis - Click responsibly 😄</p>
   </footer>
 
   <script src="script.js"></script>
